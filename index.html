@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+ 
+}
+body {
+  background-color: #eacdde;
+  font-family: monospace, sans-serif;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+audio {
+    width: 300px;
+    height: 54px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+<h1>Haappy Birthday To My Handsome Husband</h1>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>I Love You</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\1.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\1A.mp3.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Nenu ninu premistuna</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\2.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\3A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Ich liebe Dich</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\3.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\4A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>wǒ ài nǐ</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\4.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\5A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>aishi teru</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\5.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\6A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Je Saranghae</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\6.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\7A.opus" loop audio controls autoplay muted></audio>
+      </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Main tumse pyar karti hoon</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\7.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\8A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Se agapo</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\8.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\9A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Ti amo</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\9.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\10A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>ya tebya liubliu</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\10-5.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\12A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Eu te amo</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\11.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\12AA.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>nai ohev otakh</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\12.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\12A.opus" loop audio controls autoplay muted></audio>
+      </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Mahal kita</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\13.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\13A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Nakupenda</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\14.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\14A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Anh yêu em</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\15.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\15AA.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Seni seviyorum</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\16.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\15A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Kocham cię</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\17.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\17A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Nemehotatse</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\18.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\18A.opus" loop audio controls autoplay muted></audio>
+      </audio></div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>nagligivaget</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\19.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\19A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Je t’aimeh</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\22.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\20A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Ma Timilai Maya Garchu</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\20.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\21A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>enik ninne othiri ishtaman</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\21.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\22A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>mein ap say muhabat karta hoon</h2>
+      <image src ="C:\Users\SRILaxmi\OneDrive\Desktop\bash\23.jpg"></image>
+      <audio src="C:\Users\SRILaxmi\OneDrive\Desktop\bash\23A.opus" loop audio controls autoplay muted></audio>
+    </div>
+  </div>   
+</div>
+<p>Hapiest Birthday to the sweetest, thoughtful, lovely and caring person who I call my LOVE.
+  Actually God has gifted you a beautiful gift last year birthday only ...think what was that ...?? guess Mr.C ...?
+  yes your are correct it's me , haha .But Seriously last year at this day we have seen each other in the ODC. 
+  I never thought we would become this close to eachother as life partners. Rest of the story you already know i always eat your brain with the same 
+  story and unnessary questions. Yes, I do that because i love when you talk with me, i love listening our journey from you i love being you , LOL ofcourse you already know all this 
+  but these days im irritating you more im annoying more what ever i do i love you more than you know and even i know you love me more than i love you.
+  I wish I could go on and on, but no words can fit in to describe your uniqueness. I love you my Sweatheart</p>
+  <h1> Yours Chukkamma</h1>
+  <h2> PS: ignore if anything is wrong in this code wise just tried as in your way . I am not at all intersted to learn this but enjoyed as im doing for you.</h2>
+</body>
+</html>
